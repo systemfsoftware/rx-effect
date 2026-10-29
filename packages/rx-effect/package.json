@@ -1,0 +1,83 @@
+{
+  "name": "@systemfsoftware/rx-effect",
+  "license": "Apache-2.0",
+  "version": "1.0.2",
+  "author": "Ryan Lee <drdgvhbh@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/systemfsoftware/rx-effect.git",
+    "directory": "packages/rx-effect"
+  },
+  "homepage": "https://github.com/systemfsoftware/rx-effect/tree/main/packages/rx-effect#readme",
+  "bugs": "https://github.com/systemfsoftware/rx-effect/issues",
+  "description": "Bridge RxJS and Effect-TS — turn an Observable into a typed Effect Stream with backpressure and proper interruption.",
+  "keywords": [
+    "effect",
+    "effect-ts",
+    "rxjs",
+    "observable",
+    "stream",
+    "reactive",
+    "interop",
+    "backpressure",
+    "typescript"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "@systemfsoftware/source": "./src/mod.ts",
+      "types": "./dist/rx-effect.d.ts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsdown -l warn && pnpm api:check",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "lint": "f=${OXLINT_FORMAT:-${AGENT:+agent}}; oxlint . --format=${f:-default}",
+    "attw": "attw --pack .",
+    "api:check": "api-extractor-quiet run",
+    "api:update": "api-extractor run --local"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "catalog:",
+    "@systemfsoftware/arethetypeswrong-cli": "catalog:",
+    "@systemfsoftware/conformance-spec": "^1.0.1",
+    "@systemfsoftware/effect-gherkin-spec": "^8.0.0",
+    "@systemfsoftware/oxlint-config-recommended": "^5.0.0",
+    "@systemfsoftware/tsconfig": "^2.0.2",
+    "@systemfsoftware/tsdown-config": "^0.1.1",
+    "@systemfsoftware/vitest": "^3.0.0",
+    "@systemfsoftware/vitest-config": "^0.1.1",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "effect": "catalog:",
+    "fast-check": "catalog:",
+    "oxlint": "catalog:oxlint",
+    "rimraf": "catalog:",
+    "rxjs": "^7.8.2",
+    "tsdown": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "effect": "catalog:peers",
+    "rxjs": "^7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/rx-effect.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "provenance": true
+  }
+}
