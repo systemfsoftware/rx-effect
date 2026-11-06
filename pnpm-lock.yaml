@@ -177,8 +177,8 @@ catalogs:
       specifier: ^5.0.5
       version: 5.0.5
     effect:
-      specifier: ^4.1.0
-      version: 4.1.0
+      specifier: ^4.1.2
+      version: 4.1.2
     rimraf:
       specifier: ^6.1.3
       version: 6.1.3
@@ -216,9 +216,9 @@ overrides:
   '@systemfsoftware/tsdown-config': file:.sfs-deps/tsdown-config-0.1.1.tgz
   '@systemfsoftware/vitest': file:.sfs-deps/vitest-3.0.0.tgz
   '@systemfsoftware/vitest-config': file:.sfs-deps/vitest-config-0.1.1.tgz
-  '@effect/platform-node': ^4.1.0
-  '@effect/platform-node-shared': ^4.1.0
-  '@effect/tsgo': ^0.63.0
+  '@effect/platform-node': ^4.1.2
+  '@effect/platform-node-shared': ^4.1.2
+  '@effect/tsgo': ^0.64.1
   fast-check: ^4.10.2
   vite: ^8.3.4
   esbuild: ^0.28.2
@@ -240,8 +240,8 @@ importers:
         specifier: ^21
         version: 21.2.3
       '@effect/tsgo':
-        specifier: ^0.63.0
-        version: 0.63.0
+        specifier: ^0.64.1
+        version: 0.64.1
       oxlint:
         specifier: catalog:oxlint
         version: 1.90.0(oxlint-tsgolint@7.0.2005)
@@ -268,13 +268,13 @@ importers:
         version: 4.2.0
       '@systemfsoftware/conformance-spec':
         specifier: file:../../.sfs-deps/conformance-spec-1.0.1.tgz
-        version: file:.sfs-deps/conformance-spec-1.0.1.tgz(effect@4.1.0)
+        version: file:.sfs-deps/conformance-spec-1.0.1.tgz(effect@4.1.2)
       '@systemfsoftware/effect-gherkin-spec':
         specifier: file:../../.sfs-deps/effect-gherkin-spec-8.0.0.tgz
-        version: file:.sfs-deps/effect-gherkin-spec-8.0.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.0)(vitest@5.0.5)
+        version: file:.sfs-deps/effect-gherkin-spec-8.0.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.2)(vitest@5.0.5)
       '@systemfsoftware/oxlint-config-recommended':
         specifier: file:../../.sfs-deps/oxlint-config-recommended-5.0.0.tgz
-        version: file:.sfs-deps/oxlint-config-recommended-5.0.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
+        version: file:.sfs-deps/oxlint-config-recommended-5.0.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
       '@systemfsoftware/tsconfig':
         specifier: file:../../.sfs-deps/tsconfig-2.0.2.tgz
         version: file:.sfs-deps/tsconfig-2.0.2.tgz
@@ -283,7 +283,7 @@ importers:
         version: file:.sfs-deps/tsdown-config-0.1.1.tgz(@microsoft/api-extractor@7.60.0(@types/node@26.6.5))(tsdown@0.23.0(typescript@7.0.2))
       '@systemfsoftware/vitest':
         specifier: file:../../.sfs-deps/vitest-3.0.0.tgz
-        version: file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5)
+        version: file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5)
       '@systemfsoftware/vitest-config':
         specifier: file:../../.sfs-deps/vitest-config-0.1.1.tgz
         version: file:.sfs-deps/vitest-config-0.1.1.tgz(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1))(vitest@5.0.5)
@@ -295,7 +295,7 @@ importers:
         version: 5.0.5(vitest@5.0.5)
       effect:
         specifier: 'catalog:'
-        version: 4.1.0
+        version: 4.1.2
       fast-check:
         specifier: ^4.10.2
         version: 4.10.2
@@ -427,56 +427,56 @@ packages:
     resolution: {integrity: sha512-aalGyl7dbB5PArRebDIX43ZvBlXrYm9uWzGJ26t+4SzJVPsOuvfILGGbw5X4yX7i50YEmJ8zvbiWnqH/AAnZqg==}
     engines: {node: '>=22'}
 
-  '@effect/platform-node-shared@4.1.0':
-    resolution: {integrity: sha512-uYQfFRoxWLo8fIhiSeBcmz/R1ooOfE3HF3cWHFgxz82tZMk2Wn02BGABcdLmaAch9VpDLbtWnuhSxNyBsGMUFg==}
+  '@effect/platform-node-shared@4.1.2':
+    resolution: {integrity: sha512-wSwl9A/G1hcVvF8nLI+YfB3EyOIDvWS6+lsTZBkmgDnPBL7m8YWZF+1HD+mdEsb52SUGfukip46Q3gRwSdk3QA==}
     engines: {node: '>=22.19.0'}
     peerDependencies:
-      effect: ^4.1.0
+      effect: ^4.1.2
 
-  '@effect/platform-node@4.1.0':
-    resolution: {integrity: sha512-v+X7moGVF9k5oMVvz0slA+NgtEod+W+oygeI285MDJgSlUCW3JcqElj+cD3rlijFZtpKhC7RLkU1GuCxjGHTpA==}
+  '@effect/platform-node@4.1.2':
+    resolution: {integrity: sha512-ye0UjxORdd5Qu3paZ1LljgGOALWHt7muP9VTpjUSCNfcesiB/Hm7wPJIvZeu4gnwpTe5BtEnO1VHngWqjJp8mA==}
     engines: {node: '>=22.19.0'}
     peerDependencies:
-      effect: ^4.1.0
-      redis: '>=5.0.0 <7.0.0'
+      effect: ^4.1.2
+      redis: '>=5.1.0 <7.0.0'
 
-  '@effect/tsgo-darwin-arm64@0.63.0':
-    resolution: {integrity: sha512-KBvYatuEol71+i+BERWuDRU9XE+4sTK78N83Ko6VNF5gy6yXiujj/bgtWs2P3cDGXsevAV6L+HtpuAWjAQKC6Q==}
+  '@effect/tsgo-darwin-arm64@0.64.1':
+    resolution: {integrity: sha512-/T4E1JzKiCaXL1dNyNDB2K+7Wot35Pt+FttrrQ5XV5W2p6A62FhCzpZvPaNZ/NQvT/Ldw6wNMtprivpE0mKTdQ==}
     cpu: [arm64]
     os: [darwin]
 
-  '@effect/tsgo-darwin-x64@0.63.0':
-    resolution: {integrity: sha512-Qxp51/OFaHx5D+z5f1FtRKAiUH5rkMzaqjv/4ppUGNS0ppdqlcQ5rwQqbY6CiZOxqUlcnmKRirtWpmuxUgHP7w==}
+  '@effect/tsgo-darwin-x64@0.64.1':
+    resolution: {integrity: sha512-K6GwVVbudxEG3vuf3x4ooAsL667T/uf5XQXNkKzlxNDqHv6i/h8eRIArRk0flV1Z1H97YQmHTryoeffjKAgbAQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@effect/tsgo-linux-arm64@0.63.0':
-    resolution: {integrity: sha512-uwnM3kSwaHDKPeU1WSMxijdZaM1NxpDREgJtyyIx2qdqB6HnRYhEZB8RrhWvYYPw1QDKaWHd+byzq5p49+o7+Q==}
+  '@effect/tsgo-linux-arm64@0.64.1':
+    resolution: {integrity: sha512-sVmjJzl1aqliVkHkBhgZgQMrxI2eaD2IFYXaz4FWVgOOENqE92xBEJrpnwhsKVEwxMZCDoEG6yEHZQJ2m4vGmw==}
     cpu: [arm64]
     os: [linux]
 
-  '@effect/tsgo-linux-arm@0.63.0':
-    resolution: {integrity: sha512-tVwlTyAqmDVPvDrr0oogCnlRVs96X19Ny9OD/XJ/6QQSp/1hIjXAvKjo9HAyncF2sAUQyVdF1E7Q7X3wFXvSnQ==}
+  '@effect/tsgo-linux-arm@0.64.1':
+    resolution: {integrity: sha512-DKpAPkIEm1avo0II4wdpkzQXyHYRDYoVbTBs/2KROnKtT20ZVJHLJUAlfEbHZjFi5nhg1s8UgeUNPsR1kamNJA==}
     cpu: [arm]
     os: [linux]
 
-  '@effect/tsgo-linux-x64@0.63.0':
-    resolution: {integrity: sha512-fM3pJIhAZEX8LMbd/pN9iYNxkdVEkx68vMtILYGT4qazwxWelvouD/5fNV0SHDmY13Mv04NJ/550vTLC2hU8VA==}
+  '@effect/tsgo-linux-x64@0.64.1':
+    resolution: {integrity: sha512-mHSsYFFgEsOiGo2E/G0T0kKmphb88oJZnJMx8IaO0/wVIdEAUKIMN30o13cC9gXJpeCrNox6ZilrzFOA+VllFg==}
     cpu: [x64]
     os: [linux]
 
-  '@effect/tsgo-win32-arm64@0.63.0':
-    resolution: {integrity: sha512-LTS0CrEqZmQO0AJAIfFaETjIN/3d/Nda1Mi5zl90y/9BKZr4yyFfClCkz+DMl6/P/+TOuEQ5Wi8LvRiEdwWT4g==}
+  '@effect/tsgo-win32-arm64@0.64.1':
+    resolution: {integrity: sha512-Av6WBMiQIu1jyKgU8Cy8fLOnKBvJAk94Hb2vpFzgwRNItFgC9cFUhvUGa+QVZRx60xwx0cWBs4HpEDXpFuqNyA==}
     cpu: [arm64]
     os: [win32]
 
-  '@effect/tsgo-win32-x64@0.63.0':
-    resolution: {integrity: sha512-28s5YrwL26/7EUnUOu81IOJGJZLkPf2lPkiSIsd4EnFhimeBqP279bhAoDAEwLW1gv45GKM/49JKduXmdLyT1g==}
+  '@effect/tsgo-win32-x64@0.64.1':
+    resolution: {integrity: sha512-fDozqyqyT15T/RcGswIqr8yVOMDhAAnsDZ8o0UP2OAaXzIf5lO6SvUbS+A5A0KE0ddCCBYWPF/8Rw1N9y7sVNQ==}
     cpu: [x64]
     os: [win32]
 
-  '@effect/tsgo@0.63.0':
-    resolution: {integrity: sha512-bRbvVj+YLE/nBmcBWGAwsul3mjEYlqqOmWMxvwSVKq/oNnJEuZYgi2OFDeUf7q49E2g3w+oMHMWyN2QayZ77RQ==}
+  '@effect/tsgo@0.64.1':
+    resolution: {integrity: sha512-MtBw+qO1IJdZklc80rBXIMgAZBmNTH1NeEHgJu5LiCFocDR0X56cFYUyKItYY7+D9ROzNIS3bD/sL1Tku6mMpQ==}
     hasBin: true
 
   '@jridgewell/resolve-uri@3.1.2':
@@ -1816,8 +1816,8 @@ packages:
       oxc-resolver:
         optional: true
 
-  effect@4.1.0:
-    resolution: {integrity: sha512-lGx2MJJyrXA8RZb2UpQ/0Nkb5Utaimby7oD92+18noBxLPE85IFOvptdzau8dvcxAOwfwHo9iqapbKeFzqQM/Q==}
+  effect@4.1.2:
+    resolution: {integrity: sha512-d3Oah1WyKxFLFh19yWheS5IXIVaITzxZ71JkE1rkUozq/6EcJSU5nPk5bF2QrSygZ3SQoiNQB8TsxFriyMeMaQ==}
 
   emoji-regex@10.6.0:
     resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
@@ -2618,8 +2618,8 @@ packages:
     resolution: {integrity: sha512-OTIk8iR8/aCRWBqvxrzxR0hgxWpnYBblY1S5hDWBQfk/VFmJwzmJgQFN3WsoUKHISv2eAwe+PpbUzyL1CKTLXg==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  ws@8.22.0:
-    resolution: {integrity: sha512-Ydggc987+RO0AnWtZ/7Wq9FtNvcrL1b/RO0ud9mWjUPgDrsAAwQSF51sm2hm1XofbU/4jkpGEsLFsZZxU+1DOg==}
+  ws@8.22.1:
+    resolution: {integrity: sha512-oyL6OPYme/CmiFvNuGzeoxCJ4nOrZE2O1FwM9MWM1AsGri6nLXB2pg+lNA8aLeXMSav0J6eIVS1j6vUPzUtK9g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -2804,55 +2804,55 @@ snapshots:
 
   '@conventional-changelog/template@1.4.0': {}
 
-  '@effect/platform-node-shared@4.1.0(effect@4.1.0)':
+  '@effect/platform-node-shared@4.1.2(effect@4.1.2)':
     dependencies:
       '@types/ws': 8.18.2
-      effect: 4.1.0
-      ws: 8.22.0
+      effect: 4.1.2
+      ws: 8.22.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform-node@4.1.0(effect@4.1.0)(redis@6.3.0)':
+  '@effect/platform-node@4.1.2(effect@4.1.2)(redis@6.3.0)':
     dependencies:
-      '@effect/platform-node-shared': 4.1.0(effect@4.1.0)
-      effect: 4.1.0
+      '@effect/platform-node-shared': 4.1.2(effect@4.1.2)
+      effect: 4.1.2
       redis: 6.3.0
       undici: 8.12.3
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@effect/tsgo-darwin-arm64@0.63.0':
+  '@effect/tsgo-darwin-arm64@0.64.1':
     optional: true
 
-  '@effect/tsgo-darwin-x64@0.63.0':
+  '@effect/tsgo-darwin-x64@0.64.1':
     optional: true
 
-  '@effect/tsgo-linux-arm64@0.63.0':
+  '@effect/tsgo-linux-arm64@0.64.1':
     optional: true
 
-  '@effect/tsgo-linux-arm@0.63.0':
+  '@effect/tsgo-linux-arm@0.64.1':
     optional: true
 
-  '@effect/tsgo-linux-x64@0.63.0':
+  '@effect/tsgo-linux-x64@0.64.1':
     optional: true
 
-  '@effect/tsgo-win32-arm64@0.63.0':
+  '@effect/tsgo-win32-arm64@0.64.1':
     optional: true
 
-  '@effect/tsgo-win32-x64@0.63.0':
+  '@effect/tsgo-win32-x64@0.64.1':
     optional: true
 
-  '@effect/tsgo@0.63.0':
+  '@effect/tsgo@0.64.1':
     optionalDependencies:
-      '@effect/tsgo-darwin-arm64': 0.63.0
-      '@effect/tsgo-darwin-x64': 0.63.0
-      '@effect/tsgo-linux-arm': 0.63.0
-      '@effect/tsgo-linux-arm64': 0.63.0
-      '@effect/tsgo-linux-x64': 0.63.0
-      '@effect/tsgo-win32-arm64': 0.63.0
-      '@effect/tsgo-win32-x64': 0.63.0
+      '@effect/tsgo-darwin-arm64': 0.64.1
+      '@effect/tsgo-darwin-x64': 0.64.1
+      '@effect/tsgo-linux-arm': 0.64.1
+      '@effect/tsgo-linux-arm64': 0.64.1
+      '@effect/tsgo-linux-x64': 0.64.1
+      '@effect/tsgo-win32-arm64': 0.64.1
+      '@effect/tsgo-win32-x64': 0.64.1
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
@@ -3358,58 +3358,58 @@ snapshots:
 
   '@systemfsoftware/arethetypeswrong-cli@4.2.0': {}
 
-  '@systemfsoftware/conformance-spec@file:.sfs-deps/conformance-spec-1.0.1.tgz(effect@4.1.0)':
+  '@systemfsoftware/conformance-spec@file:.sfs-deps/conformance-spec-1.0.1.tgz(effect@4.1.2)':
     dependencies:
-      '@systemfsoftware/effect-sim-kernel': file:.sfs-deps/effect-sim-kernel-2.0.0.tgz(effect@4.1.0)
-      effect: 4.1.0
+      '@systemfsoftware/effect-sim-kernel': file:.sfs-deps/effect-sim-kernel-2.0.0.tgz(effect@4.1.2)
+      effect: 4.1.2
 
-  '@systemfsoftware/effect-gherkin-spec@file:.sfs-deps/effect-gherkin-spec-8.0.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.0)(vitest@5.0.5)':
+  '@systemfsoftware/effect-gherkin-spec@file:.sfs-deps/effect-gherkin-spec-8.0.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.2)(vitest@5.0.5)':
     dependencies:
-      '@systemfsoftware/effect-spec-runtime': file:.sfs-deps/effect-spec-runtime-1.1.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.0)(vitest@5.0.5)
-      '@systemfsoftware/vitest': file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5)
-      effect: 4.1.0
+      '@systemfsoftware/effect-spec-runtime': file:.sfs-deps/effect-spec-runtime-1.1.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.2)(vitest@5.0.5)
+      '@systemfsoftware/vitest': file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5)
+      effect: 4.1.2
       vitest: 5.0.5(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1))
 
-  '@systemfsoftware/effect-sim-kernel@file:.sfs-deps/effect-sim-kernel-2.0.0.tgz(effect@4.1.0)':
+  '@systemfsoftware/effect-sim-kernel@file:.sfs-deps/effect-sim-kernel-2.0.0.tgz(effect@4.1.2)':
     dependencies:
-      effect: 4.1.0
+      effect: 4.1.2
 
-  '@systemfsoftware/effect-spec-runtime@file:.sfs-deps/effect-spec-runtime-1.1.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.0)(vitest@5.0.5)':
+  '@systemfsoftware/effect-spec-runtime@file:.sfs-deps/effect-spec-runtime-1.1.0.tgz(@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5))(effect@4.1.2)(vitest@5.0.5)':
     dependencies:
-      '@systemfsoftware/effect-sim-kernel': file:.sfs-deps/effect-sim-kernel-2.0.0.tgz(effect@4.1.0)
-      '@systemfsoftware/vitest': file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5)
-      effect: 4.1.0
+      '@systemfsoftware/effect-sim-kernel': file:.sfs-deps/effect-sim-kernel-2.0.0.tgz(effect@4.1.2)
+      '@systemfsoftware/vitest': file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5)
+      effect: 4.1.2
       vitest: 5.0.5(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1))
 
-  '@systemfsoftware/oxlint-config-cell-architecture@file:.sfs-deps/oxlint-config-cell-architecture-5.0.0.tgz(effect@4.1.0)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-config-cell-architecture@file:.sfs-deps/oxlint-config-cell-architecture-5.0.0.tgz(effect@4.1.2)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)':
     dependencies:
       '@systemfsoftware/oxlint-config-rule-authoring': file:.sfs-deps/oxlint-config-rule-authoring-2.0.0.tgz(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
-      '@systemfsoftware/oxlint-plugin-cell-architecture': file:.sfs-deps/oxlint-plugin-cell-architecture-6.0.0.tgz(effect@4.1.0)(typescript@7.0.2)
-      effect: 4.1.0
+      '@systemfsoftware/oxlint-plugin-cell-architecture': file:.sfs-deps/oxlint-plugin-cell-architecture-6.0.0.tgz(effect@4.1.2)(typescript@7.0.2)
+      effect: 4.1.2
       oxlint: 1.90.0(oxlint-tsgolint@7.0.2005)
       typescript: 7.0.2
 
-  '@systemfsoftware/oxlint-config-dmmf@file:.sfs-deps/oxlint-config-dmmf-3.0.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-config-dmmf@file:.sfs-deps/oxlint-config-dmmf-3.0.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)':
     dependencies:
       '@systemfsoftware/oxlint-config-rule-authoring': file:.sfs-deps/oxlint-config-rule-authoring-2.0.0.tgz(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
-      '@systemfsoftware/oxlint-plugin-dmmf-workflow': file:.sfs-deps/oxlint-plugin-dmmf-workflow-7.1.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)
-      '@systemfsoftware/oxlint-plugin-effect-schema': file:.sfs-deps/oxlint-plugin-effect-schema-6.0.1.tgz(effect@4.1.0)(typescript@7.0.2)
-      effect: 4.1.0
+      '@systemfsoftware/oxlint-plugin-dmmf-workflow': file:.sfs-deps/oxlint-plugin-dmmf-workflow-7.1.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)
+      '@systemfsoftware/oxlint-plugin-effect-schema': file:.sfs-deps/oxlint-plugin-effect-schema-6.0.1.tgz(effect@4.1.2)(typescript@7.0.2)
+      effect: 4.1.2
       oxlint: 1.90.0(oxlint-tsgolint@7.0.2005)
       oxlint-tsgolint: 7.0.2005
       typescript: 7.0.2
     transitivePeerDependencies:
       - vite-plus
 
-  '@systemfsoftware/oxlint-config-recommended@file:.sfs-deps/oxlint-config-recommended-5.0.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-config-recommended@file:.sfs-deps/oxlint-config-recommended-5.0.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)':
     dependencies:
-      '@effect/tsgo': 0.63.0
-      '@systemfsoftware/oxlint-config-cell-architecture': file:.sfs-deps/oxlint-config-cell-architecture-5.0.0.tgz(effect@4.1.0)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
-      '@systemfsoftware/oxlint-config-dmmf': file:.sfs-deps/oxlint-config-dmmf-3.0.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
+      '@effect/tsgo': 0.64.1
+      '@systemfsoftware/oxlint-config-cell-architecture': file:.sfs-deps/oxlint-config-cell-architecture-5.0.0.tgz(effect@4.1.2)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
+      '@systemfsoftware/oxlint-config-dmmf': file:.sfs-deps/oxlint-config-dmmf-3.0.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
       '@systemfsoftware/oxlint-config-rule-authoring': file:.sfs-deps/oxlint-config-rule-authoring-2.0.0.tgz(oxlint@1.90.0(oxlint-tsgolint@7.0.2005))(typescript@7.0.2)
-      '@systemfsoftware/oxlint-plugin-effect-platform': file:.sfs-deps/oxlint-plugin-effect-platform-2.1.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)
-      '@systemfsoftware/oxlint-plugin-test-discipline': file:.sfs-deps/oxlint-plugin-test-discipline-6.0.0.tgz(effect@4.1.0)(typescript@7.0.2)
-      effect: 4.1.0
+      '@systemfsoftware/oxlint-plugin-effect-platform': file:.sfs-deps/oxlint-plugin-effect-platform-2.1.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)
+      '@systemfsoftware/oxlint-plugin-test-discipline': file:.sfs-deps/oxlint-plugin-test-discipline-6.0.0.tgz(effect@4.1.2)(typescript@7.0.2)
+      effect: 4.1.2
       oxlint: 1.90.0(oxlint-tsgolint@7.0.2005)
       oxlint-tsgolint: 7.0.2005
       typescript: 7.0.2
@@ -3421,36 +3421,36 @@ snapshots:
       oxlint: 1.90.0(oxlint-tsgolint@7.0.2005)
       typescript: 7.0.2
 
-  '@systemfsoftware/oxlint-plugin-cell-architecture@file:.sfs-deps/oxlint-plugin-cell-architecture-6.0.0.tgz(effect@4.1.0)(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-plugin-cell-architecture@file:.sfs-deps/oxlint-plugin-cell-architecture-6.0.0.tgz(effect@4.1.2)(typescript@7.0.2)':
     dependencies:
       '@oxc-project/types': 0.153.0
       '@oxlint/plugins': 1.87.0
-      effect: 4.1.0
+      effect: 4.1.2
       typescript: 7.0.2
 
-  '@systemfsoftware/oxlint-plugin-dmmf-workflow@file:.sfs-deps/oxlint-plugin-dmmf-workflow-7.1.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-plugin-dmmf-workflow@file:.sfs-deps/oxlint-plugin-dmmf-workflow-7.1.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)':
     dependencies:
       '@oxc-project/types': 0.153.0
       '@oxlint/plugins': 1.87.0
-      effect: 4.1.0
+      effect: 4.1.2
       oxlint: 1.87.0(oxlint-tsgolint@7.0.2005)
       typescript: 7.0.2
     transitivePeerDependencies:
       - oxlint-tsgolint
       - vite-plus
 
-  '@systemfsoftware/oxlint-plugin-effect-platform@file:.sfs-deps/oxlint-plugin-effect-platform-2.1.0.tgz(effect@4.1.0)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-plugin-effect-platform@file:.sfs-deps/oxlint-plugin-effect-platform-2.1.0.tgz(effect@4.1.2)(oxlint-tsgolint@7.0.2005)(typescript@7.0.2)':
     dependencies:
       '@oxc-project/types': 0.153.0
       '@oxlint/plugins': 1.87.0
-      effect: 4.1.0
+      effect: 4.1.2
       oxlint: 1.87.0(oxlint-tsgolint@7.0.2005)
       typescript: 7.0.2
     transitivePeerDependencies:
       - oxlint-tsgolint
       - vite-plus
 
-  '@systemfsoftware/oxlint-plugin-effect-schema@file:.sfs-deps/oxlint-plugin-effect-schema-6.0.1.tgz(effect@4.1.0)(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-plugin-effect-schema@file:.sfs-deps/oxlint-plugin-effect-schema-6.0.1.tgz(effect@4.1.2)(typescript@7.0.2)':
     dependencies:
       '@oxc-project/types': 0.153.0
       '@oxlint/plugins': 1.87.0
@@ -3458,14 +3458,14 @@ snapshots:
       '@pnpm/workspace.projects-reader': 1101.1.6(@pnpm/logger@1100.0.0)
       '@pnpm/workspace.root-finder': 1100.1.5
       '@pnpm/workspace.workspace-manifest-reader': 1100.3.1
-      effect: 4.1.0
+      effect: 4.1.2
       typescript: 7.0.2
 
-  '@systemfsoftware/oxlint-plugin-test-discipline@file:.sfs-deps/oxlint-plugin-test-discipline-6.0.0.tgz(effect@4.1.0)(typescript@7.0.2)':
+  '@systemfsoftware/oxlint-plugin-test-discipline@file:.sfs-deps/oxlint-plugin-test-discipline-6.0.0.tgz(effect@4.1.2)(typescript@7.0.2)':
     dependencies:
       '@oxc-project/types': 0.153.0
       '@oxlint/plugins': 1.87.0
-      effect: 4.1.0
+      effect: 4.1.2
       oxc-parser: 0.153.0
       typescript: 7.0.2
 
@@ -3481,10 +3481,10 @@ snapshots:
       vite: 8.3.5(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1)
       vitest: 5.0.5(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1))
 
-  '@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.0)(redis@6.3.0)(vitest@5.0.5)':
+  '@systemfsoftware/vitest@file:.sfs-deps/vitest-3.0.0.tgz(effect@4.1.2)(redis@6.3.0)(vitest@5.0.5)':
     dependencies:
-      '@effect/platform-node': 4.1.0(effect@4.1.0)(redis@6.3.0)
-      effect: 4.1.0
+      '@effect/platform-node': 4.1.2(effect@4.1.2)(redis@6.3.0)
+      effect: 4.1.2
       vitest: 5.0.5(@types/node@26.6.5)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.1))
     transitivePeerDependencies:
       - bufferutil
@@ -3804,7 +3804,7 @@ snapshots:
 
   dts-resolver@3.0.0: {}
 
-  effect@4.1.0: {}
+  effect@4.1.2: {}
 
   emoji-regex@10.6.0: {}
 
@@ -4492,7 +4492,7 @@ snapshots:
     dependencies:
       signal-exit: 4.1.0
 
-  ws@8.22.0: {}
+  ws@8.22.1: {}
 
   y18n@5.0.8: {}
 
