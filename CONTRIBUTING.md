@@ -3,7 +3,6 @@
 ## Requirements
 
 - Nix with flakes
-- GNU coreutils: the setup command uses `cp -L --no-preserve=mode`
 - Node.js 24
 - pnpm (the version pinned in `package.json`'s `packageManager`)
 
@@ -12,24 +11,23 @@ shell that has nix the wrapper scripts resolve what they need themselves.
 
 ## Dependencies on core
 
-Core packages are not installed from a registry. `flake.nix` pins core at a full commit (input `core`), and
-`nix build .#sfs-deps` links the core tarballs this lockfile names. `pnpm-workspace.yaml` maps every core package
-(and its transitive core closure) to `file:.sfs-deps/<name>-<version>.tgz` through `overrides`.
+https://nix.systemfsoftware.com is the package registry for `@systemfsoftware` packages: a producer pushes its package tarballs there from `main`, a consumer substitutes them through its flake inputs, and nothing is published to npm.
+
+`flake.nix` pins core at a full commit (input `core`), and `pnpm-release-management.lib.mkProducerTarballs` lays core's pushed tarballs into `.deps/` when the dev shell starts. `pnpm-workspace.yaml` maps every core package to `file:.deps/<name>.tgz` through `overrides`.
 
 To take newer core packages:
 
-1. Bump the `core` input.
-2. Rebuild `.sfs-deps` (the tarballs' names carry their versions, so this is what tells you the
-   new versions).
-3. Point `pnpm-workspace.yaml`'s overrides at those new `<name>-<version>.tgz` names.
-4. Run `pnpm install`.
+1. Bump the `core` input, then run `nix flake update core`.
+2. Run `nix eval --raw .#producer-tarballs.overrides` and update `pnpm-workspace.yaml`'s `overrides` if core added or dropped a package.
+3. Enter `nix develop` so `.deps/` holds the new tarballs.
+4. Run `pnpm update '@systemfsoftware/*'` to record the new versions and integrities.
 
 Other external dependencies come from the configured npm registry.
 
 ## Setup and workflow
 
 ```bash
-mkdir -p .sfs-deps && cp -L --no-preserve=mode "$(nix build --no-link --print-out-paths .#sfs-deps)"/*.tgz .sfs-deps/
+nix develop   # the shell hook copies core tarballs into .deps/; then run the rest inside it
 pnpm install
 pnpm format
 pnpm check:local

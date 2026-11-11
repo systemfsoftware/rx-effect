@@ -12,16 +12,14 @@ Extracted from `systemfsoftware/systemfsoftware` (core); package history came wi
 
 ## Dependencies on core
 
-Core packages are not installed from a registry. `flake.nix` pins core at a full commit (input `core`) and
-`nix build .#sfs-deps` links the core tarballs this lockfile names. `pnpm-workspace.yaml` maps every core package
-(and its transitive core closure) to `file:.sfs-deps/<name>-<version>.tgz` through `overrides`; the moved manifests
-name ordinary semver ranges. To take newer core packages: bump the `core` input, update the override versions,
-rebuild `.sfs-deps`, run `pnpm install`.
+https://nix.systemfsoftware.com is the package registry for `@systemfsoftware` packages: a producer pushes its package tarballs there from `main`, a consumer substitutes them through its flake inputs, and nothing is published to npm.
+
+`flake.nix` pins core at a full commit (input `core`), and `pnpm-release-management.lib.mkProducerTarballs` lays core's pushed tarballs into `.deps/`. `pnpm-workspace.yaml` maps every core package to `file:.deps/<name>.tgz` through `overrides`; the moved manifests name ordinary semver ranges. To take newer core packages: bump the `core` input, run `nix flake update core`, then `pnpm update '@systemfsoftware/*'`.
 
 Local setup:
 
 ```bash
-mkdir -p .sfs-deps && cp -L --no-preserve=mode "$(nix build --no-link --print-out-paths .#sfs-deps)"/*.tgz .sfs-deps/
+nix develop   # the shell hook copies core's tarballs into .deps/
 pnpm install
 ```
 
