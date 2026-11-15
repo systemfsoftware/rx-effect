@@ -12,14 +12,14 @@ Extracted from `systemfsoftware/systemfsoftware` (core); package history came wi
 
 ## Dependencies on core
 
-https://nix.systemfsoftware.com is the package registry for `@systemfsoftware` packages: a producer pushes its package tarballs there from `main`, a consumer substitutes them through its flake inputs, and nothing is published to npm.
-
-`flake.nix` pins core at a full commit (input `core`), and `pnpm-release-management.lib.mkProducerTarballs` lays core's pushed tarballs into `.deps/`. `pnpm-workspace.yaml` maps every core package to `file:.deps/<name>.tgz` through `overrides`; the moved manifests name ordinary semver ranges. To take newer core packages: bump the `core` input, run `nix flake update core`, then `pnpm update '@systemfsoftware/*'`.
+`@systemfsoftware` packages come from npm like any other dependency: package manifests and catalogs name caret
+ranges and `pnpm-lock.yaml` holds the exact versions. Take newer ones with `pnpm update '@systemfsoftware/*'`.
+`flake.nix` pins core at a full commit (input `core`) only for its dprint build and its nixpkgs.
 
 Local setup:
 
 ```bash
-nix develop   # the shell hook copies core's tarballs into .deps/
+nix develop
 pnpm install
 ```
 

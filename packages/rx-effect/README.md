@@ -15,7 +15,7 @@ const stream = fromObservable(interval(1000)) // Stream<number>
 ## Install
 
 ```bash
-pnpm add @systemfsoftware/rx-effect
+pnpm add @systemfsoftware/rx-effect effect@^4 rxjs@^7
 ```
 
 > [!NOTE]

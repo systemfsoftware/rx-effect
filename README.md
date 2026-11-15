@@ -21,30 +21,11 @@ Effect.runPromise(Stream.runCollect(ticks)).then(console.log)
 
 ## Install
 
-`@systemfsoftware` packages are not published to npm. They come from nix.systemfsoftware.com, the package registry for `@systemfsoftware` packages.
+```bash
+pnpm add @systemfsoftware/rx-effect effect@^4 rxjs@^7
+```
 
-1. Add this repository as a flake input:
-
-   ```nix
-   inputs.rx-effect.url = "github:systemfsoftware/rx-effect";
-   ```
-
-2. Substitute from the cache. This repository's `flake.nix` sets the same keys:
-
-   ```nix
-   nixConfig = {
-     extra-substituters = "https://nix.systemfsoftware.com";
-     extra-trusted-public-keys = "nix-cache-1:wXA8I4DayNW9q6enUyQA/P/nT38pGSTLt374t3gsn7M=";
-   };
-   ```
-
-3. Take the package tarball through the consumer route in [pnpm-release-management](https://github.com/systemfsoftware/pnpm-release-management). That repository provides `lib.mkProducerTarballs`, the call this repository's `flake.nix` makes for its own producers, and `lib.mkPnpmConsumerStore`.
-
-4. Install the peers from npm. You bring `effect` and `rxjs` yourself:
-
-   ```bash
-   pnpm add effect@^4 rxjs@^7
-   ```
+`effect` and `rxjs` are peer dependencies: this package declares them but does not install them, so one copy is shared with the rest of your project.
 
 ## API
 

@@ -11,23 +11,14 @@ shell that has nix the wrapper scripts resolve what they need themselves.
 
 ## Dependencies on core
 
-https://nix.systemfsoftware.com is the package registry for `@systemfsoftware` packages: a producer pushes its package tarballs there from `main`, a consumer substitutes them through its flake inputs, and nothing is published to npm.
+`@systemfsoftware` packages come from npm like any other dependency: package manifests and catalogs name caret ranges and `pnpm-lock.yaml` holds the exact versions. Run `pnpm update '@systemfsoftware/*'` to take newer ones.
 
-`flake.nix` pins core at a full commit (input `core`), and `pnpm-release-management.lib.mkProducerTarballs` lays core's pushed tarballs into `.deps/` when the dev shell starts. `pnpm-workspace.yaml` maps every core package to `file:.deps/<name>.tgz` through `overrides`.
-
-To take newer core packages:
-
-1. Bump the `core` input, then run `nix flake update core`.
-2. Run `nix eval --raw .#producer-tarballs.overrides` and update `pnpm-workspace.yaml`'s `overrides` if core added or dropped a package.
-3. Enter `nix develop` so `.deps/` holds the new tarballs.
-4. Run `pnpm update '@systemfsoftware/*'` to record the new versions and integrities.
-
-Other external dependencies come from the configured npm registry.
+`flake.nix` pins core at a full commit (input `core`) only for its dprint build and its nixpkgs.
 
 ## Setup and workflow
 
 ```bash
-nix develop   # the shell hook copies core tarballs into .deps/; then run the rest inside it
+nix develop   # then run the rest inside it
 pnpm install
 pnpm format
 pnpm check:local
